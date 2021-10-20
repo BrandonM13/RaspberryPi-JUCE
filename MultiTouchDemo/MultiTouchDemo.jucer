@@ -48,7 +48,7 @@
         <MODULEPATH id="juce_gui_basics" path=""/>
       </MODULEPATHS>
     </VS2019>
-    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile" extraLinkerFlags="-latomic">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MultiTouchDemo"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MultiTouchDemo"/>

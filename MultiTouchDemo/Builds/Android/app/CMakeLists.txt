@@ -12,7 +12,7 @@ add_definitions("-DJUCE_ANDROID=1" "-DJUCE_ANDROID_API_VERSION=16" "-DPIP_JUCE_E
 
 include_directories( AFTER
     "../../../JuceLibraryCode"
-    "C:/Users/Brandon.Munford/Desktop/JUCE/modules"
+    "/home/pi/Desktop/JUCE/modules"
     "${ANDROID_NDK}/sources/android/cpufeatures"
 )
 
