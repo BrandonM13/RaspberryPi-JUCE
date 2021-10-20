@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		004ED15725FA51317FCDD500 /* Main.cpp */ = {isa = PBXBuildFile; fileRef = DD2BD88E96A86D2146D75C78; };
+		01DB048BA041B147A6CD8BF3 /* CoreGraphics.framework */ = {isa = PBXBuildFile; fileRef = AB11345EDB0013B272BE4EFB; };
+		049D73715EAC350DA1104EC9 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = 49090DED963A42CBBE878A46; };
+		2331511A2C7C5BD6A0E986AD /* App */ = {isa = PBXBuildFile; fileRef = 96CAF4AD3C857F7167E012E0; };
+		25D7FE32075A3118CAA494C1 /* UIKit.framework */ = {isa = PBXBuildFile; fileRef = D936E6B0EB9A51C64B37F835; };
+		2E642DE3840FC871A02B5F00 /* LaunchScreen.storyboard */ = {isa = PBXBuildFile; fileRef = 53FE3CDC2309A24A4C7AB314; };
+		3860543E59CEB2E88C870DE6 /* CoreImage.framework */ = {isa = PBXBuildFile; fileRef = E9F47C34FC20D0E22011D282; };
+		4035548ABB1CA3DC4AEC01AD /* CoreText.framework */ = {isa = PBXBuildFile; fileRef = 5FFF405E0A6BD3CA385CD79C; };
+		48FE2418E90976AF971CAFC2 /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = B6703996EEB9B8746044DFE3; };
+		599D64222F11E86399B32737 /* Assets */ = {isa = PBXBuildFile; fileRef = 2E74A01F053250EA10E00D59; };
+		5EA95C58709B4DC892DDCFBB /* Images.xcassets */ = {isa = PBXBuildFile; fileRef = AB6997AFAB0D389EF43523D0; };
+		7D6F910737F749AA0E047C1A /* CoreServices.framework */ = {isa = PBXBuildFile; fileRef = 74065021B9792A241D852CD5; };
+		7E6BF3B1AA8A76DC9E6C2964 /* include_juce_core.mm */ = {isa = PBXBuildFile; fileRef = D8EC88006CFE754B367C9C36; };
+		C4C8B75BA6C9EBAE121A0474 /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = ED5CC87D4EAFAC1BFBC57ED4; };
+		C6F015792D70ABB360E20349 /* include_juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = 6CD0985A37DCD5B2367B60DC; };
+		D474FBF5323AE05024151C46 /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = B836683B2DEF29C62182EE5B; };
+		E01297ADA187E8FA9CAFAAD4 /* C */ = {isa = PBXBuildFile; fileRef = 3EF1D1C5F9214420A8C14ED6; };
+		F789C40EFAA43896F9E9E79E /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = CA6725C6E7D7C5C0693405BC; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2AC2BEE1BE7A52DA2E18709E /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = "~/JUCE/modules/juce_data_structures"; sourceTree = "<absolute>"; };
+		2AFA57E39A49EFE110833BC9 /* MultiTouchDemo.h */ /* MultiTouchDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MultiTouchDemo.h; path = ../../Source/MultiTouchDemo.h; sourceTree = SOURCE_ROOT; };
+		2E74A01F053250EA10E00D59 /* Assets */ /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = /Users/Brandon.Munford/Desktop/JUCE/examples/Assets; sourceTree = "<group>"; };
+		2F5095A5B9BBF909A55E36E1 /* DemoUtilities.h */ /* DemoUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoUtilities.h; path = ../../Source/DemoUtilities.h; sourceTree = SOURCE_ROOT; };
+		3D17E167DEAF7B635F6ACC03 /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = "~/JUCE/modules/juce_events"; sourceTree = "<absolute>"; };
+		3EF1D1C5F9214420A8C14ED6 /* C */ /* C */ = {isa = PBXFileReference; lastKnownFileType = folder; name = C; path = ../../C; sourceTree = "<group>"; };
+		40AA3BAEBF1D70FD68072DF3 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
+		420E2000458E946C888AE523 /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = "~/JUCE/modules/juce_core"; sourceTree = "<absolute>"; };
+		4216C3B88011527C6DF81F34 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = "~/JUCE/modules/juce_graphics"; sourceTree = "<absolute>"; };
+		49090DED963A42CBBE878A46 /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
+		53FE3CDC2309A24A4C7AB314 /* LaunchScreen.storyboard */ /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		5FFF405E0A6BD3CA385CD79C /* CoreText.framework */ /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6CD0985A37DCD5B2367B60DC /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
+		74065021B9792A241D852CD5 /* CoreServices.framework */ /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		7EC2B5F52E5CB40202C649E9 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = "~/JUCE/modules/juce_gui_basics"; sourceTree = "<absolute>"; };
+		7ED1EC79DFB1EAE64AC59C4F /* Info-App.plist */ /* Info-App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-App.plist"; path = "Info-App.plist"; sourceTree = SOURCE_ROOT; };
+		96CAF4AD3C857F7167E012E0 /* App */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB11345EDB0013B272BE4EFB /* CoreGraphics.framework */ /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AB6997AFAB0D389EF43523D0 /* Images.xcassets */ /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MultiTouchDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		B6703996EEB9B8746044DFE3 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
+		B836683B2DEF29C62182EE5B /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CA6725C6E7D7C5C0693405BC /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D8EC88006CFE754B367C9C36 /* include_juce_core.mm */ /* include_juce_core.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_core.mm; path = ../../JuceLibraryCode/include_juce_core.mm; sourceTree = SOURCE_ROOT; };
+		D936E6B0EB9A51C64B37F835 /* UIKit.framework */ /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD2BD88E96A86D2146D75C78 /* Main.cpp */ /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = ../../Source/Main.cpp; sourceTree = SOURCE_ROOT; };
+		E9F47C34FC20D0E22011D282 /* CoreImage.framework */ /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		ED5CC87D4EAFAC1BFBC57ED4 /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D819FA6EDCFA9C92E18B41D = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01DB048BA041B147A6CD8BF3,
+				3860543E59CEB2E88C870DE6,
+				7D6F910737F749AA0E047C1A,
+				4035548ABB1CA3DC4AEC01AD,
+				D474FBF5323AE05024151C46,
+				F789C40EFAA43896F9E9E79E,
+				25D7FE32075A3118CAA494C1,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21924C28952F9154F1DC33F2 /* MultiTouchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E381900C1CFC753E2DF1F27E,
+				E34EF3B8425A7EDBB2344470,
+			);
+			name = MultiTouchDemo;
+			sourceTree = "<group>";
+		};
+		38BE5880799474E79EA317D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EF1D1C5F9214420A8C14ED6,
+				2E74A01F053250EA10E00D59,
+				7ED1EC79DFB1EAE64AC59C4F,
+				AB6997AFAB0D389EF43523D0,
+				53FE3CDC2309A24A4C7AB314,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		53159C289B614768CC949257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB11345EDB0013B272BE4EFB,
+				E9F47C34FC20D0E22011D282,
+				74065021B9792A241D852CD5,
+				5FFF405E0A6BD3CA385CD79C,
+				B836683B2DEF29C62182EE5B,
+				CA6725C6E7D7C5C0693405BC,
+				D936E6B0EB9A51C64B37F835,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		658406A475BAD59DC6E230F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CAF4AD3C857F7167E012E0,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C388FB2F61513B54300E706 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				21924C28952F9154F1DC33F2,
+				E260CEDDF481730231C4BB42,
+				8A89CA93E0C9E04094357716,
+				38BE5880799474E79EA317D8,
+				53159C289B614768CC949257,
+				658406A475BAD59DC6E230F8,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		8A89CA93E0C9E04094357716 /* JUCE Library Code */ = {
+			isa = PBXGroup;
+			children = (
+				D8EC88006CFE754B367C9C36,
+				6CD0985A37DCD5B2367B60DC,
+				ED5CC87D4EAFAC1BFBC57ED4,
+				B6703996EEB9B8746044DFE3,
+				49090DED963A42CBBE878A46,
+				40AA3BAEBF1D70FD68072DF3,
+			);
+			name = "JUCE Library Code";
+			sourceTree = "<group>";
+		};
+		E260CEDDF481730231C4BB42 /* JUCE Modules */ = {
+			isa = PBXGroup;
+			children = (
+				420E2000458E946C888AE523,
+				2AC2BEE1BE7A52DA2E18709E,
+				3D17E167DEAF7B635F6ACC03,
+				4216C3B88011527C6DF81F34,
+				7EC2B5F52E5CB40202C649E9,
+			);
+			name = "JUCE Modules";
+			sourceTree = "<group>";
+		};
+		E34EF3B8425A7EDBB2344470 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2F5095A5B9BBF909A55E36E1,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E381900C1CFC753E2DF1F27E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DD2BD88E96A86D2146D75C78,
+				2AFA57E39A49EFE110833BC9,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD02E691F75524F68229CD78 /* MultiTouchDemo - App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A105E5AAEA71715FAC8A1A28;
+			buildPhases = (
+				B9693C705F5FB12142DB7890,
+				667F45EDAA6CA969CECC692C,
+				0D819FA6EDCFA9C92E18B41D,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MultiTouchDemo - App";
+			productName = MultiTouchDemo;
+			productReference = 96CAF4AD3C857F7167E012E0;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		720B20E09F99D1923CB98779 = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1300;
+				ORGANIZATIONNAME = "JUCE";
+				TargetAttributes = {
+					CD02E691F75524F68229CD78 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E49F5F0DD50887ECB392A083;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7C388FB2F61513B54300E706;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD02E691F75524F68229CD78,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9693C705F5FB12142DB7890 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E01297ADA187E8FA9CAFAAD4,
+				599D64222F11E86399B32737,
+				5EA95C58709B4DC892DDCFBB,
+				2E642DE3840FC871A02B5F00,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		667F45EDAA6CA969CECC692C = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				004ED15725FA51317FCDD500,
+				7E6BF3B1AA8A76DC9E6C2964,
+				C6F015792D70ABB360E20349,
+				C4C8B75BA6C9EBAE121A0474,
+				48FE2418E90976AF971CAFC2,
+				049D73715EAC350DA1104EC9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03180AB83D11FE2B21F25D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "MultiTouchDemo";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		0CF49611A67791E39818641D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_CONTENT_SHARING=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x60102",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_STANDALONE_APPLICATION=1",
+					"PIP_JUCE_EXAMPLES_DIRECTORY=QzpcVXNlcnNcQnJhbmRvbi5NdW5mb3JkXERlc2t0b3BcSlVDRVxleGFtcGxlcw==",
+					"JUCER_XCODE_IPHONE_5BC26AE3=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-App.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LLVM_LTO = YES;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JUCE.MultiTouchDemo;
+				PRODUCT_NAME = "MultiTouchDemo";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		98ED9FFAA846E7F90AC8B0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = "MultiTouchDemo";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		E3AF5217DFAC4B1CFCA4E1FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_CONTENT_SHARING=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x60102",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_STANDALONE_APPLICATION=1",
+					"PIP_JUCE_EXAMPLES_DIRECTORY=QzpcVXNlcnNcQnJhbmRvbi5NdW5mb3JkXERlc2t0b3BcSlVDRVxleGFtcGxlcw==",
+					"JUCER_XCODE_IPHONE_5BC26AE3=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-App.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JUCE.MultiTouchDemo;
+				PRODUCT_NAME = "MultiTouchDemo";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A105E5AAEA71715FAC8A1A28 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AF5217DFAC4B1CFCA4E1FE,
+				0CF49611A67791E39818641D,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E49F5F0DD50887ECB392A083 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03180AB83D11FE2B21F25D44,
+				98ED9FFAA846E7F90AC8B0C9,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 720B20E09F99D1923CB98779 /* Project object */;
+}

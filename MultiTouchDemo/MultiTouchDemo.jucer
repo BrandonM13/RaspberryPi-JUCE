@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT name="MultiTouchDemo" companyName="JUCE" version="1.0.0" userNotes="Showcases multi-touch features."
+              companyWebsite="http://juce.com" displaySplashScreen="1" defines="PIP_JUCE_EXAMPLES_DIRECTORY=QzpcVXNlcnNcQnJhbmRvbi5NdW5mb3JkXERlc2t0b3BcSlVDRVxleGFtcGxlcw=="
+              projectType="guiapp" useAppConfig="0" addUsingNamespaceToJuceHeader="1"
+              id="Inp3SY" jucerFormatVersion="1">
+  <MAINGROUP id="Sweid8" name="MultiTouchDemo">
+    <GROUP id="{F7337504-C76A-E401-91E0-9500E85AFAE2}" name="Source">
+      <FILE id="xL9Ttc" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="qaY1nb" name="MultiTouchDemo.h" compile="0" resource="0"
+            file="Source/MultiTouchDemo.h"/>
+    </GROUP>
+    <GROUP id="uGpISV" name="Assets">
+      <FILE id="UOxgYO" name="DemoUtilities.h" compile="0" resource="0" file="Source/DemoUtilities.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MultiTouchDemo"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MultiTouchDemo"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path=""/>
+        <MODULEPATH id="juce_data_structures" path=""/>
+        <MODULEPATH id="juce_events" path=""/>
+        <MODULEPATH id="juce_graphics" path=""/>
+        <MODULEPATH id="juce_gui_basics" path=""/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MultiTouchDemo"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MultiTouchDemo"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path=""/>
+        <MODULEPATH id="juce_data_structures" path=""/>
+        <MODULEPATH id="juce_events" path=""/>
+        <MODULEPATH id="juce_graphics" path=""/>
+        <MODULEPATH id="juce_gui_basics" path=""/>
+      </MODULEPATHS>
+    </VS2019>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MultiTouchDemo"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MultiTouchDemo"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path=""/>
+        <MODULEPATH id="juce_data_structures" path=""/>
+        <MODULEPATH id="juce_events" path=""/>
+        <MODULEPATH id="juce_graphics" path=""/>
+        <MODULEPATH id="juce_gui_basics" path=""/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <ANDROIDSTUDIO targetFolder="Builds/Android" androidExtraAssetsFolder="C:\Users\Brandon.Munford\Desktop\JUCE\examples\Assets">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MultiTouchDemo"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MultiTouchDemo"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path=""/>
+        <MODULEPATH id="juce_data_structures" path=""/>
+        <MODULEPATH id="juce_events" path=""/>
+        <MODULEPATH id="juce_graphics" path=""/>
+        <MODULEPATH id="juce_gui_basics" path=""/>
+      </MODULEPATHS>
+    </ANDROIDSTUDIO>
+    <XCODE_IPHONE targetFolder="Builds/iOS" customXcodeResourceFolders="C:\Users\Brandon.Munford\Desktop\JUCE\examples\Assets">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="MultiTouchDemo"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="MultiTouchDemo"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path=""/>
+        <MODULEPATH id="juce_data_structures" path=""/>
+        <MODULEPATH id="juce_events" path=""/>
+        <MODULEPATH id="juce_graphics" path=""/>
+        <MODULEPATH id="juce_gui_basics" path=""/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+  </EXPORTFORMATS>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>
