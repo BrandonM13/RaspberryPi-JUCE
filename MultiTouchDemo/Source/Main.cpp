@@ -31,22 +31,16 @@ private:
     public:
         MainWindow (const juce::String& name, juce::Component* c, JUCEApplication& a)
             : DocumentWindow (name, juce::Desktop::getInstance().getDefaultLookAndFeel()
-                                                                .findColour (ResizableWindow::backgroundColourId),
-                              juce::DocumentWindow::allButtons),
+                                                                .findColour (ResizableWindow::backgroundColourId), 0),
               app (a)
         {
             setUsingNativeTitleBar (true);
             setContentOwned (c, true);
 
-           #if JUCE_ANDROID || JUCE_IOS
-            setFullScreen (true);
-           #else
-            setResizable (true, false);
-            setResizeLimits (300, 250, 10000, 10000);
-            centreWithSize (getWidth(), getHeight());
-           #endif
+            c->addToDesktop(1);
+            juce::Desktop::getInstance().setKioskModeComponent(c);
 
-            setVisible (true);
+            centreWithSize (getWidth(), getHeight());
         }
 
         void closeButtonPressed() override
