@@ -26,10 +26,12 @@ CAN_Interface::CAN_Interface() : juce::Thread ("CAN Thread") {
 CAN_Interface::~CAN_Interface() { }
 
 void CAN_Interface::run() {
-    while (!threadShouldExit()) {
-        readCAN();        
-        wait(250);
-    }
+    readCAN();
+    return;
+    //while (!threadShouldExit()) {
+    //    readCAN();        
+    //    wait(250);
+    //}
 }
 
 int CAN_Interface::getId() { return (frame.can_id << 1) >> 1; }
@@ -42,9 +44,10 @@ int CAN_Interface::readData(int idx) {
 }
 
 void CAN_Interface::readCAN() {
-    read(s, &frame, sizeof(struct can_frame));
-    if (getId() == 301072640) {
-        currentVal = readData(3);
+    while (true) {
+        read(s, &frame, sizeof(struct can_frame));
+        if (getId() == 301072640) {
+            currentVal = readData(3);
+        }
     }
-
 }
