@@ -341,4 +341,5 @@ build/intermediate/Debug/MainComponent_a6ffb4a5.o: \
  /home/pi/Documents/JUCE/modules/juce_gui_basics/layout/juce_FlexItem.h \
  /home/pi/Documents/JUCE/modules/juce_gui_basics/layout/juce_FlexBox.h \
  /home/pi/Documents/JUCE/modules/juce_gui_basics/layout/juce_GridItem.h \
- /home/pi/Documents/JUCE/modules/juce_gui_basics/layout/juce_Grid.h
+ /home/pi/Documents/JUCE/modules/juce_gui_basics/layout/juce_Grid.h \
+ ../../Source/CAN_Interface.h
