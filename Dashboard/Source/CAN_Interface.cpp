@@ -23,20 +23,20 @@ CAN_Interface::CAN_Interface(int assignedID) : juce::Thread ("CAN Thread"), id(a
     startThread();
 }
 
-CAN_Interface::~CAN_Interface() { stopThread(100); }
+CAN_Interface::~CAN_Interface() { signalThreadShouldExit(); }
 
 void CAN_Interface::run() {
     while (!threadShouldExit()) {
         readCAN();        
-        wait(100);
+        //wait(100);
     }
 }
 
 bool CAN_Interface::checkID() { return id == ((frame.can_id << 1) >> 1); }
 
 void CAN_Interface::readCAN() {
-    while (true) {
-        read(s, &frame, sizeof(struct can_frame));
-        if (checkID()) { memcpy(data, frame.data, 8); }
-    }
+    //while (true) {
+    read(s, &frame, sizeof(struct can_frame));
+    if (checkID()) { memcpy(data, frame.data, 8); }
+    //}
 }
