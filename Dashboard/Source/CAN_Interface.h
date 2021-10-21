@@ -28,7 +28,7 @@ class CAN_Interface : private juce::Thread {
         CAN_Interface(int id);
         ~CAN_Interface();
 
-        unsigned char* data;
+        __u8 data[8];
 
     private:
         int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
