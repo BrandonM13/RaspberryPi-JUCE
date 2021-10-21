@@ -52,11 +52,13 @@ void MainComponent::timerCallback() {
     //needleAng += 0.005;
     //if (needleAng >= 1) { needleAng = 0; }
     //rpm = needleAng * 3000.f;
-
-    int id = canInterface.getId(); // chops the MSB off    
-    if (id == 301072640) {
+    DBG("" << canInterface.readData(3));
+    
+    /*
+    if (canInterface.getId() == 301072640) {
         int data = canInterface.readData(3);
         if (!data) { rpm = data; }
     }
-    repaint();
+    */
+    //repaint();
 }
