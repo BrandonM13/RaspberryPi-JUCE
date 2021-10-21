@@ -37,12 +37,13 @@ bool CAN_Interface::checkID() {
 }
 
 void CAN_Interface::readCAN() {
-    while (true) {
+    while (doLoop) {
         read(s, &frame, sizeof(struct can_frame));
         if (checkID()) {
             data = frame.data;
             int temp = (data[3] << 8) + data[4];
             DBG("" << temp);
+            doLoop = false;
         }
     }
 }

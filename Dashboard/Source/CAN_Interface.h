@@ -38,6 +38,8 @@ class CAN_Interface : private juce::Thread {
         
         int id{ 0 };
 
+        bool doLoop{ true };
+
         bool checkID();
         void readCAN();
         void run() override;
