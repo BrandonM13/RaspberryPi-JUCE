@@ -42,6 +42,8 @@ private:
             
             c->setMouseCursor(MouseCursor::NoCursor);
 
+            c->setMouseCursor(MouseCursor::NoCursor);
+
             centreWithSize (getWidth(), getHeight());
         }
 
