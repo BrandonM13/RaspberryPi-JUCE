@@ -39,6 +39,8 @@ private:
 
             c->addToDesktop(1);
             juce::Desktop::getInstance().setKioskModeComponent(c);
+            
+            c->setMouseCursor(MouseCursor::NoCursor);
 
             centreWithSize (getWidth(), getHeight());
         }

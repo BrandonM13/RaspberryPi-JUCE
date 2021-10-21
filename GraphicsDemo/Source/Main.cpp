@@ -32,14 +32,16 @@ private:
         MainWindow (const juce::String& name, juce::Component* c, JUCEApplication& a)
             : DocumentWindow (name, juce::Desktop::getInstance().getDefaultLookAndFeel()
                                                                 .findColour (ResizableWindow::backgroundColourId),
-                              juce::DocumentWindow::allButtons),
+                              0),
               app (a)
         {
             setUsingNativeTitleBar(true);
             setContentOwned(c, true);
 
-            c->addToDesktop(1);
+            c->addToDesktop(0);
             juce::Desktop::getInstance().setKioskModeComponent(c);
+            
+            
 
             centreWithSize(getWidth(), getHeight());
         }
