@@ -18,7 +18,7 @@ class MainComponent  : public juce::Component, public juce::Timer {
         int rpm = 0;
         float needleAng = 0.f;
 
-        CAN_Interface canInterface;
+        CAN_Interface canInterface{ 301072640 };
 
         JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
