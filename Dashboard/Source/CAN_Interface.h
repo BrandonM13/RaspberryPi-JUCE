@@ -28,6 +28,7 @@ class CAN_Interface : private juce::Thread {
         CAN_Interface();
         ~CAN_Interface();
 
+        int getId();
         int readData(int idx);
 
     private:
