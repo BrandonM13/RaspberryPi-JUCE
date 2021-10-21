@@ -32,7 +32,10 @@ void CAN_Interface::run() {
     }
 }
 
-bool CAN_Interface::checkID() { return id == ((frame.can_id << 1) >> 1); }
+bool CAN_Interface::checkID() {
+    DBG("" << ((frame.can_id << 1) >> 1));
+    return id == ((frame.can_id << 1) >> 1);
+}
 
 void CAN_Interface::readCAN() {
     while (true) {
