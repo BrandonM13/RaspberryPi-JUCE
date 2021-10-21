@@ -52,7 +52,8 @@ void MainComponent::timerCallback() {
     //needleAng += 0.005;
     //if (needleAng >= 1) { needleAng = 0; }
     //rpm = needleAng * 3000.f;
-    DBG("" << canInterface.readData(3));
+    DBG("" << canInterface.getId());
+    //DBG("" << canInterface.readData(3));
     
     /*
     if (canInterface.getId() == 301072640) {
