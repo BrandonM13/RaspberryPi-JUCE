@@ -33,6 +33,12 @@ void CAN_Interface::run() {
 }
 
 int CAN_Interface::getId() { return (frame.can_id << 1) >> 1; }
-int CAN_Interface::readData(int idx) { return frame.data[idx]; }
+int CAN_Interface::readData(int idx) {
+    
+    return (frame.data[idx] << 8) + frame.data[idx + 1];
+
+    //return frame.data[idx];
+
+}
 
 void CAN_Interface::readCAN() { read(s, &frame, sizeof(struct can_frame)); }
