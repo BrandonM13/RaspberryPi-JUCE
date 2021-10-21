@@ -38,6 +38,7 @@ void MainComponent::paint (juce::Graphics& g) { // THIS METHOD CAN BE MADE WAY M
 void MainComponent::resized() { }
 
 void MainComponent::timerCallback() {
+    /*
     int id = (canInterface.frame.can_id << 1) >> 1; // chops the MSB off    
     if (id == 301072640) { 
         int val = (canInterface.frame.data[3] << 8) + canInterface.frame.data[4];
@@ -47,4 +48,9 @@ void MainComponent::timerCallback() {
     
         repaint();
     }
+    */
+    needleAng += 0.005;
+    if (needleAng >= 1) { needleAng = 0; }
+    rpm = needleAng * 3000.f;
+    repaint();
 }
