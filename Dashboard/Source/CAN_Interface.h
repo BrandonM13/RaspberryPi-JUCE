@@ -10,6 +10,7 @@
 
 #pragma once
 
+#include <JuceHeader.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,16 +23,18 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
-class CAN_Interface {
+class CAN_Interface : public juce::Thread {
     public:
         CAN_Interface();
         ~CAN_Interface();
 
-        void readCAN();
+        void run() override;
         struct can_frame frame;
 
     private:
         int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
         struct sockaddr_can addr;
         struct ifreq ifr;
+        
+        void readCAN();
 };

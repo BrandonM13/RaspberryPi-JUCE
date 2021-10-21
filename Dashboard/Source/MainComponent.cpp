@@ -38,8 +38,6 @@ void MainComponent::paint (juce::Graphics& g) { // THIS METHOD CAN BE MADE WAY M
 void MainComponent::resized() { }
 
 void MainComponent::timerCallback() {
-    canInterface.readCAN();
-
     int id = (canInterface.frame.can_id << 1) >> 1; // chops the MSB off    
     if (id == 301072640) { 
         int val = (canInterface.frame.data[3] << 8) + canInterface.frame.data[4];

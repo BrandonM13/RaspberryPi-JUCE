@@ -19,10 +19,17 @@ CAN_Interface::CAN_Interface() {
     addr.can_ifindex = ifr.ifr_ifindex;
 
     bind(s, (struct sockaddr*)&addr, sizeof(addr));
+
+    startThread();
 }
 
 CAN_Interface::~CAN_Interface() { }
 
-void CAN_Interface::readCAN() {
-    read(s, &frame, sizeof(struct can_frame));
+void CAN_Interface::run() {
+    while (!threadShouldExit()) {
+        readCAN();        
+        wait(250);
+    }
 }
+
+void CAN_Interface::readCAN() { read(s, &frame, sizeof(struct can_frame)); }
