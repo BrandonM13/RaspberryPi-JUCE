@@ -10,7 +10,7 @@
 
 #include "CAN_Interface.h"
 
-CAN_Interface::CAN_Interface() {
+CAN_Interface::CAN_Interface() : juce::Thread ("CAN Thread") {
     strcpy(ifr.ifr_name, "can0");
     ioctl(s, SIOCGIFINDEX, &ifr);
 

@@ -23,7 +23,7 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
-class CAN_Interface : public juce::Thread {
+class CAN_Interface : private juce::Thread {
     public:
         CAN_Interface();
         ~CAN_Interface();
