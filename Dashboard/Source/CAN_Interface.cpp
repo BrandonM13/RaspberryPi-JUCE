@@ -32,4 +32,6 @@ void CAN_Interface::run() {
     }
 }
 
+int CAN_Interface::readData(int idx) { return frame.data[idx]; }
+
 void CAN_Interface::readCAN() { read(s, &frame, sizeof(struct can_frame)); }

@@ -28,13 +28,14 @@ class CAN_Interface : private juce::Thread {
         CAN_Interface();
         ~CAN_Interface();
 
-        void run() override;
-        struct can_frame frame;
+        int readData(int idx);
 
     private:
         int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
         struct sockaddr_can addr;
         struct ifreq ifr;
+        struct can_frame frame;
         
         void readCAN();
+        void run() override;
 };

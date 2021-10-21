@@ -49,8 +49,9 @@ void MainComponent::timerCallback() {
         repaint();
     }
     */
-    needleAng += 0.005;
-    if (needleAng >= 1) { needleAng = 0; }
-    rpm = needleAng * 3000.f;
+    //needleAng += 0.005;
+    //if (needleAng >= 1) { needleAng = 0; }
+    //rpm = needleAng * 3000.f;
+    rpm = canInterface.readData(3);
     repaint();
 }
