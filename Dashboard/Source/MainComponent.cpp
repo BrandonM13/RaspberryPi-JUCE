@@ -3,7 +3,7 @@
 //==============================================================================
 MainComponent::MainComponent() {
     setSize (800, 800);
-    startTimerHz(24);
+    startTimer(16); // 16ms update - very fast for what it's actually doing
 }
 
 MainComponent::~MainComponent() { }
@@ -38,8 +38,7 @@ void MainComponent::paint (juce::Graphics& g) { // THIS METHOD CAN BE MADE WAY M
 void MainComponent::resized() { }
 
 void MainComponent::timerCallback() {
-
-    rpm = (canInterface.data[3] << 8) + canInterface.data[4];
+    rpm = (canInterface.data[3] << 8) + canInterface.data[4]; // Pull the data from the canInterface
     needleAng = rpm / 3000.f;
 
     repaint();
