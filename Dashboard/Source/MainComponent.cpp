@@ -52,11 +52,12 @@ void MainComponent::timerCallback() {
     //needleAng += 0.005;
     //if (needleAng >= 1) { needleAng = 0; }
     //rpm = needleAng * 3000.f;
-    DBG("" << canInterface.currentVal);
-    /*
-        int data = canInterface.readData(3);
-        if (!data) { rpm = data; }
-    }
-    */
-    //repaint();
+    //DBG("" << canInterface.currentVal);
+    //int data = canInterface.readData(3);
+    //if (!data) { rpm = data; }
+
+    rpm = canInterface.currentVal;
+    needleAng = rpm / 3000.f;
+
+    repaint();
 }
