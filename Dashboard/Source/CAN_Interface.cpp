@@ -41,4 +41,10 @@ int CAN_Interface::readData(int idx) {
 
 }
 
-void CAN_Interface::readCAN() { read(s, &frame, sizeof(struct can_frame)); }
+void CAN_Interface::readCAN() {
+    read(s, &frame, sizeof(struct can_frame));
+    if (getId() == 301072640) {
+        currentVal = readData(3);
+    }
+
+}

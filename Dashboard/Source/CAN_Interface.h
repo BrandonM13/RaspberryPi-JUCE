@@ -31,6 +31,8 @@ class CAN_Interface : private juce::Thread {
         int getId();
         int readData(int idx);
 
+        int currentVal{ 0 };
+
     private:
         int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
         struct sockaddr_can addr;
