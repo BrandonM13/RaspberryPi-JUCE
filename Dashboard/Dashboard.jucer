@@ -8,6 +8,9 @@
       <FILE id="M6CISW" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="R6YAAo" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
+      <FILE id="CDRxWw" name="CAN_Interface.cpp" compile="1" resource="0"
+            file="Source/CAN_Interface.cpp"/>
+      <FILE id="ANMATe" name="CAN_Interface.h" compile="0" resource="0" file="Source/CAN_Interface.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>

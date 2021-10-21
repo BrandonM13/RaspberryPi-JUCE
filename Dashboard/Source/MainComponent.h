@@ -1,17 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-
-#include <net/if.h>
-#include <sys/ioctl.h>
-#include <sys/socket.h>
-
-#include <linux/can.h>
-#include <linux/can/raw.h>
+#include "CAN_Interface.h"
 
 class MainComponent  : public juce::Component, public juce::Timer {
     public:
@@ -25,13 +15,10 @@ class MainComponent  : public juce::Component, public juce::Timer {
         void timerCallback();
 
     private:
-        float needleAng = 0.f;
         int rpm = 0;
+        float needleAng = 0.f;
 
-        int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
-        struct sockaddr_can addr;
-        struct ifreq ifr;
-        struct can_frame frame;
+        CAN_Interface canInterface;
 
         JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

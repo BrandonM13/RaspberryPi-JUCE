@@ -2,23 +2,14 @@
 
 //==============================================================================
 MainComponent::MainComponent() {
-    strcpy(ifr.ifr_name, "can0");
-    ioctl(s, SIOCGIFINDEX, &ifr);
-
-    memset(&addr, 0, sizeof(addr));
-    addr.can_family = AF_CAN;
-    addr.can_ifindex = ifr.ifr_ifindex;
-    
-    bind(s, (struct sockaddr*)&addr, sizeof(addr));
-
-    setSize (600, 600);
+    setSize (800, 800);
     startTimerHz(24);
 }
 
 MainComponent::~MainComponent() { }
 
 //==============================================================================
-void MainComponent::paint (juce::Graphics& g) {
+void MainComponent::paint (juce::Graphics& g) { // THIS METHOD CAN BE MADE WAY MORE EFFICIENT
     g.fillAll (juce::Colours::black);
     
     auto area = getLocalBounds().toFloat().reduced(10.f);
@@ -41,21 +32,21 @@ void MainComponent::paint (juce::Graphics& g) {
 
     g.setColour(juce::Colours::lightgrey);
     g.setFont(70.f);
-    g.drawText("RPM: " + String(rpm), area.removeFromTop(area.getHeight()/2.f), juce::Justification::centred);
+    g.drawText("RPM: " + juce::String(rpm), area.removeFromTop(area.getHeight()/2.f), juce::Justification::centred);
 }
 
 void MainComponent::resized() { }
 
 void MainComponent::timerCallback() {
-        read(s, &frame, sizeof(struct can_frame));
+    canInterface.readCAN();
 
-        int id = (frame.can_id << 1) >> 1; // chops the MSB off    
-        if (id == 301072640) { 
-            int val = (frame.data[3] << 8) + frame.data[4];
-            if (!val) { return; }
-            rpm = val;
-            needleAng = (float)rpm / 3000.f; // To get val between 0 and 1
+    int id = (canInterface.frame.can_id << 1) >> 1; // chops the MSB off    
+    if (id == 301072640) { 
+        int val = (canInterface.frame.data[3] << 8) + canInterface.frame.data[4];
+        if (!val) { return; }
+        rpm = val;
+        needleAng = (float)rpm / 3000.f; // To get val between 0 and 1
     
-            repaint();
-        }
+        repaint();
+    }
 }
