@@ -10,7 +10,7 @@
 
 #include "CAN_Interface.h"
 
-CAN_Interface::CAN_Interface() : juce::Thread ("CAN Thread") {
+CAN_Interface::CAN_Interface(int assignedID) : juce::Thread ("CAN Thread"), id(assignedID) {
     strcpy(ifr.ifr_name, "can0");
     ioctl(s, SIOCGIFINDEX, &ifr);
 
@@ -23,31 +23,20 @@ CAN_Interface::CAN_Interface() : juce::Thread ("CAN Thread") {
     startThread();
 }
 
-CAN_Interface::~CAN_Interface() { }
+CAN_Interface::~CAN_Interface() { stopThread(100); }
 
 void CAN_Interface::run() {
-    readCAN();
-    return;
-    //while (!threadShouldExit()) {
-    //    readCAN();        
-    //    wait(250);
-    //}
+    while (!threadShouldExit()) {
+        readCAN();        
+        wait(100);
+    }
 }
 
-int CAN_Interface::getId() { return (frame.can_id << 1) >> 1; }
-int CAN_Interface::readData(int idx) {
-    
-    return (frame.data[idx] << 8) + frame.data[idx + 1];
-
-    //return frame.data[idx];
-
-}
+bool CAN_Interface::checkID() { return id == ((frame.can_id << 1) >> 1); }
 
 void CAN_Interface::readCAN() {
     while (true) {
         read(s, &frame, sizeof(struct can_frame));
-        if (getId() == 301072640) {
-            currentVal = readData(3);
-        }
+        if (checkID()) { data = frame.data; }
     }
 }

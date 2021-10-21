@@ -25,13 +25,10 @@
 
 class CAN_Interface : private juce::Thread {
     public:
-        CAN_Interface();
+        CAN_Interface(int id);
         ~CAN_Interface();
 
-        int getId();
-        int readData(int idx);
-
-        int currentVal{ 0 };
+        unsigned char* data;
 
     private:
         int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
@@ -39,6 +36,9 @@ class CAN_Interface : private juce::Thread {
         struct ifreq ifr;
         struct can_frame frame;
         
+        int id{ 0 };
+
+        bool checkID();
         void readCAN();
         void run() override;
 };
