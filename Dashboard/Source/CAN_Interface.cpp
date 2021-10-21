@@ -32,18 +32,11 @@ void CAN_Interface::run() {
     }
 }
 
-bool CAN_Interface::checkID() {
-    return id == ((frame.can_id << 1) >> 1);
-}
+bool CAN_Interface::checkID() { return id == ((frame.can_id << 1) >> 1); }
 
 void CAN_Interface::readCAN() {
-    while (doLoop) {
+    while (true) {
         read(s, &frame, sizeof(struct can_frame));
-        if (checkID()) {
-            data = frame.data;
-            int temp = (data[3] << 8) + data[4];
-            DBG("" << temp);
-            doLoop = false;
-        }
+        if (checkID()) { memcpy(data, frame.data, frame.can_dlc); }
     }
 }
