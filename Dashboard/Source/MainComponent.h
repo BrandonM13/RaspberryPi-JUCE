@@ -26,8 +26,9 @@ class MainComponent  : public juce::Component, public juce::Timer {
 
     private:
         float needleAng = 0.f;
+        int rpm = 0;
 
-        int s;
+        int s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
         struct sockaddr_can addr;
         struct ifreq ifr;
         struct can_frame frame;

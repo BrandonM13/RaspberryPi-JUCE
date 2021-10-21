@@ -12,7 +12,7 @@ MainComponent::MainComponent() {
     bind(s, (struct sockaddr*)&addr, sizeof(addr));
 
     setSize (600, 600);
-    startTimerHz(60);
+    startTimerHz(24);
 }
 
 MainComponent::~MainComponent() { }
@@ -41,21 +41,21 @@ void MainComponent::paint (juce::Graphics& g) {
 
     g.setColour(juce::Colours::lightgrey);
     g.setFont(70.f);
-    g.drawText("RPM", area.removeFromTop(area.getHeight()/2.f), juce::Justification::centred);
-
+    g.drawText("RPM: " + String(rpm), area.removeFromTop(area.getHeight()/2.f), juce::Justification::centred);
 }
 
 void MainComponent::resized() { }
 
 void MainComponent::timerCallback() {
-    read(s, &frame, sizeof(struct can_frame));
+        read(s, &frame, sizeof(struct can_frame));
 
-    int id = (frame.can_id << 1) >> 1; // chops the MSB off    
-    if (id != 301072640) { return; }
-    int rpm = (frame.data[3] << 8) + frame.data[4];
-    if (!rpm) { return; }
-
-    needleAng = rpm / 3000; // To get val between 0 and 1
-
-    repaint();
+        int id = (frame.can_id << 1) >> 1; // chops the MSB off    
+        if (id == 301072640) { 
+            int val = (frame.data[3] << 8) + frame.data[4];
+            if (!val) { return; }
+            rpm = val;
+            needleAng = (float)rpm / 3000.f; // To get val between 0 and 1
+    
+            repaint();
+        }
 }
