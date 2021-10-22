@@ -64,13 +64,17 @@ public:
                                                           .findColour (juce::ResizableWindow::backgroundColourId),
                               DocumentWindow::allButtons)
         {
+            MainComponent* c;
             setUsingNativeTitleBar (true);
-            setContentOwned (new MainComponent(), true);
+            setContentOwned (c = new MainComponent(), true);
 
-            setResizable (true, true);
-            centreWithSize (getWidth(), getHeight());
+            c->addToDesktop(1);
+            juce::Desktop::getInstance().setKioskModeComponent(c);
+            c->setMouseCursor(juce::MouseCursor::NoCursor);
 
-            setVisible (true);
+            //setResizable (true, true);
+            centreWithSize(getWidth(), getHeight());
+            //setVisible (true);
         }
 
         void closeButtonPressed() override
