@@ -16,6 +16,8 @@ class MainComponent  : public juce::Component, public juce::Timer {
         void timerCallback();
 
     private:
+        juce::Slider slider;
+
         Dial rpm_dial{ "RPM", 3000.f };
         CAN_Interface rpmInterface{ 301072640 };
 
