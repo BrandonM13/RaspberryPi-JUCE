@@ -23,8 +23,8 @@ void MainComponent::resized() { // temp positioning function
 
 void MainComponent::timerCallback() {
     int rpm = (rpmInterface.data[3] << 8) + rpmInterface.data[4]; // Pull the data from the canInterface
-    rpm_dial.setValue(rpm);
+    if (rpm) { rpm_dial.setValue(rpm); }
 
     int volt = (minCellVoltInterface.data[2] << 8) + minCellVoltInterface.data[1];
-    minCellVolt_dial.setValue(volt);
+    if (volt) { minCellVolt_dial.setValue(volt / 1000.f); }
 }

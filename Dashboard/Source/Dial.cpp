@@ -47,7 +47,7 @@ void Dial::paint (juce::Graphics& g){
     g.fillPath(needle, rotation);
 
     g.setColour(juce::Colours::lightgrey);
-    g.setFont(70.f);
+    g.setFont(30.f);
     g.drawText(name + ": " + juce::String(currentValue), area.removeFromTop(height_2), juce::Justification::centred);
 }
 
