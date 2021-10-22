@@ -11,6 +11,11 @@
       <FILE id="CDRxWw" name="CAN_Interface.cpp" compile="1" resource="0"
             file="Source/CAN_Interface.cpp"/>
       <FILE id="ANMATe" name="CAN_Interface.h" compile="0" resource="0" file="Source/CAN_Interface.h"/>
+      <FILE id="L4brXs" name="Dial.cpp" compile="1" resource="0" file="Source/Dial.cpp"/>
+      <FILE id="MSmwBj" name="Dial.h" compile="0" resource="0" file="Source/Dial.h"/>
+      <FILE id="HieZjq" name="Battery_Disp.cpp" compile="1" resource="0"
+            file="Source/Battery_Disp.cpp"/>
+      <FILE id="vsrbx8" name="Battery_Disp.h" compile="0" resource="0" file="Source/Battery_Disp.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>

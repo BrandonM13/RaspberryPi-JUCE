@@ -2,44 +2,29 @@
 
 //==============================================================================
 MainComponent::MainComponent() {
+    addAndMakeVisible(rpm_dial);
+    addAndMakeVisible(minCellVolt_dial);
+
     setSize (800, 800);
-    startTimer(16); // 16ms update - very fast for what it's actually doing
+    startTimerHz(60); // 60fps - very fast for what it's actually doing
 }
 
 MainComponent::~MainComponent() { }
 
-//==============================================================================
-void MainComponent::paint (juce::Graphics& g) { // THIS METHOD CAN BE MADE WAY MORE EFFICIENT
-    g.fillAll (juce::Colours::black);
-    
-    auto area = getLocalBounds().toFloat().reduced(10.f);
+void MainComponent::paint(juce::Graphics& g) { g.fillAll(juce::Colours::black); } // Background
 
-    juce::Path dial, needle;
-    dial.addArc(area.getX(), area.getY(), area.getWidth(), area.getHeight(), 3.f*juce::float_Pi/2.f, 5.f*juce::float_Pi/2.f, true);
+void MainComponent::resized() { // temp positioning function
+    auto area = getLocalBounds();
+    area.removeFromLeft(area.getWidth() / 2);
 
-    juce::ColourGradient gradient = juce::ColourGradient(juce::Colours::green, juce::Point<float>(area.getX(), area.getHeight()/2.f), juce::Colours::red, juce::Point<float>(area.getWidth(), area.getHeight()/2.f), false);
-    gradient.addColour(0.5, juce::Colours::yellow);
-
-    g.setGradientFill(gradient);
-    g.strokePath(dial, juce::PathStrokeType(10.f));
-    
-    juce::Rectangle<float> needleRect(area.getWidth() / 2.f, area.getHeight() / 2.f, 1.f, 285.f);
-    juce::AffineTransform rotation = juce::AffineTransform::rotation((needleAng * juce::float_Pi) + (juce::float_Pi / 2.f), area.getWidth() / 2.f, (area.getHeight() / 2.f) + 0.5);
-
-    needle.addRectangle(needleRect);
-    g.setColour(juce::Colours::white);
-    g.fillPath(needle, rotation);
-
-    g.setColour(juce::Colours::lightgrey);
-    g.setFont(70.f);
-    g.drawText("RPM: " + juce::String(rpm), area.removeFromTop(area.getHeight()/2.f), juce::Justification::centred);
+    rpm_dial.setBounds(area.removeFromBottom(area.getHeight() / 2));
+    minCellVolt_dial.setBounds(area);
 }
 
-void MainComponent::resized() { }
-
 void MainComponent::timerCallback() {
-    rpm = (canInterface.data[3] << 8) + canInterface.data[4]; // Pull the data from the canInterface
-    needleAng = rpm / 3000.f;
+    int rpm = (rpmInterface.data[3] << 8) + rpmInterface.data[4]; // Pull the data from the canInterface
+    rpm_dial.setValue(rpm);
 
-    repaint();
+    int volt = (minCellVoltInterface.data[2] << 8) + minCellVoltInterface.data[1];
+    minCellVolt_dial.setValue(volt);
 }
