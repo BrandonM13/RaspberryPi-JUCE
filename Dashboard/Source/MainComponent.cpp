@@ -4,6 +4,9 @@
 MainComponent::MainComponent() {
     addAndMakeVisible(rpm_dial);
     addAndMakeVisible(minCellVolt_dial);
+    addAndMakeVisible(slider);
+
+    slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
 
     setSize (800, 800);
     startTimerHz(60); // 60fps - very fast for what it's actually doing
@@ -15,7 +18,9 @@ void MainComponent::paint(juce::Graphics& g) { g.fillAll(juce::Colours::black); 
 
 void MainComponent::resized() { // temp positioning function
     auto area = getLocalBounds();
-    area.removeFromLeft(area.getWidth() / 2);
+    auto leftSide = area.removeFromLeft(area.getWidth() / 2);
+
+    slider.setBounds(leftSide.reduced(20));
 
     rpm_dial.setBounds(area.removeFromBottom(area.getHeight() / 2));
     minCellVolt_dial.setBounds(area);
