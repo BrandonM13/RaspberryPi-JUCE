@@ -8,7 +8,7 @@ MainComponent::MainComponent() {
 
     slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
 
-    setSize (800, 800);
+    setSize (400, 400);
     startTimerHz(60); // 60fps - very fast for what it's actually doing
 }
 
